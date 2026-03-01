@@ -4,6 +4,7 @@ import java.time.Duration;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.github.javafaker.Faker;
@@ -21,6 +22,10 @@ public class testData {
 	String userName = firstName + "." + lastName;
 	String email = faker.internet().emailAddress();
 	String password = faker.internet().password(6, 12, true, true, true);
+
+	String jobTitle = faker.job().title();
+	Actions actions = new Actions(driver);
+	String newJobTitle = faker.job().title();
 
 	public void mySetup() {
 

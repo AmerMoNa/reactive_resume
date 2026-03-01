@@ -5,8 +5,9 @@
     <classes>
       <class name="ReactiveResume.ReactiveResume.AppTest">
         <methods>
+          <include name="deleteResume"/>
+          <include name="editTheResume"/>
           <include name="setUp"/>
-          <include name="login"/>
         </methods>
       </class> <!-- ReactiveResume.ReactiveResume.AppTest -->
     </classes>
