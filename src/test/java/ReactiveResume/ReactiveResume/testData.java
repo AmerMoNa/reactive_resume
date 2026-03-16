@@ -26,12 +26,14 @@ public class testData {
 	String jobTitle = faker.job().title();
 	Actions actions = new Actions(driver);
 	String newJobTitle = faker.job().title();
+	
+	
 
 	public void mySetup() {
 
 		driver.get(theURL);
 		driver.manage().window().maximize();
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(7));
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 
 	}
 

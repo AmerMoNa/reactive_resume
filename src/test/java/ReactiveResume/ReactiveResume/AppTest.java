@@ -7,6 +7,7 @@ import java.util.List;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.testng.Assert;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
@@ -21,7 +22,12 @@ public class AppTest extends testData {
 
 	@Test(priority = 1)
 	public void registerAccount() {
-		WebElement createAccountButton = driver.findElement(By.linkText("Create one now"));
+
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(".grid.grid-cols-2.gap-4")));
+				
+				
+				
+		WebElement createAccountButton = driver.findElement(By.partialLinkText("Create"));
 		createAccountButton.click();
 
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(".grid.grid-cols-2.gap-4")));
@@ -48,7 +54,9 @@ public class AppTest extends testData {
 
 	@Test(priority = 2, enabled = true)
 	public void logout() {
-		WebElement menuButton = driver.findElement(By.id("radix-_r_7_"));
+		
+		WebElement menuButton = wait.until(
+				ExpectedConditions.elementToBeClickable((By.xpath("//button[@data-slot='dropdown-menu-trigger']"))));
 		menuButton.click();
 
 		WebElement logOutButton = driver.findElement(By.cssSelector(".relative.flex.cursor-default"));
@@ -69,7 +77,7 @@ public class AppTest extends testData {
 
 	}
 
-	@Test(priority = 4)
+	@Test(priority = 4, enabled = true)
 	public void createResume() {
 		List<WebElement> resumeSections = driver
 				.findElements(By.cssSelector(".absolute.inset-0.flex.items-center.justify-center"));
@@ -111,10 +119,27 @@ public class AppTest extends testData {
 
 	}
 
-	@Test(priority = 6)
+	@Test(priority = 6, enabled = true)
+	public void uploadImage() {
+		WebElement resumeCard = driver.findElement(By.cssSelector(".select-none.cursor-default"));
+		resumeCard.click();
+
+		WebElement imageUrlInput = driver.findElement(By.name("url"));
+		imageUrlInput.sendKeys("https://i.imgur.com/8Km9tLL.jpg");
+
+//		WebElement checkUploadedImage = driver.findElement(By.cssSelector(".page-picture.shrink-0.overflow-hidden"));
+//		Assert.assertTrue(checkUploadedImage.isDisplayed());
+
+		driver.navigate().back();
+
+	}
+
+	@Test(priority = 7, enabled = true)
 	public void deleteResume() {
 
-		WebElement resumeCard = driver.findElement(By.cssSelector(".select-none.cursor-default"));
+		WebElement resumeCard = wait
+				.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(".select-none.cursor-default")));
+
 		actions.contextClick(resumeCard).perform();
 
 		WebElement deleteButton = driver.findElement(By.xpath("//div[text()='Delete']"));
@@ -122,6 +147,26 @@ public class AppTest extends testData {
 
 		WebElement confirmButton = driver.findElement(By.xpath("//button[text()='Confirm']"));
 		confirmButton.click();
+
+	}
+
+	@Test(priority = 8, enabled = true)
+	public void languageSwitching() {
+
+		WebElement menuButton = wait.until(
+				ExpectedConditions.elementToBeClickable((By.xpath("//button[@data-slot='dropdown-menu-trigger']"))));
+		menuButton.click();
+
+		WebElement LanguageButton = driver.findElement(By.xpath("//div[text()='Language']"));
+		LanguageButton.click();
+
+		WebElement selecteArabic = driver.findElement(By.xpath("//div[text()='Arabic']"));
+		selecteArabic.click();
+
+	}
+
+	@Test(priority = 9, enabled = false)
+	public void none() {
 
 	}
 
