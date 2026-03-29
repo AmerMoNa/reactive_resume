@@ -18,10 +18,12 @@ public class testData {
 	Faker faker = new Faker();
 	String firstName = faker.name().firstName();
 	String lastName = faker.name().lastName();
-	String name = firstName + " " + lastName;
+	String fullName = firstName + " " + lastName;
 	String userName = firstName + "." + lastName;
 	String email = faker.internet().emailAddress();
 	String password = faker.internet().password(6, 12, true, true, true);
+	
+	String name = faker.name().fullName();
 
 	String jobTitle = faker.job().title();
 	Actions actions = new Actions(driver);

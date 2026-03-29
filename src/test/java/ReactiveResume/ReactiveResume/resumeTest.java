@@ -5,13 +5,14 @@ import static org.testng.Assert.assertEquals;
 import java.util.List;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Assert;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-public class AppTest extends testData {
+public class resumeTest extends testData {
 
 	@BeforeTest
 	public void setUp() {
@@ -24,16 +25,14 @@ public class AppTest extends testData {
 	public void registerAccount() {
 
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(".grid.grid-cols-2.gap-4")));
-				
-				
-				
+
 		WebElement createAccountButton = driver.findElement(By.partialLinkText("Create"));
 		createAccountButton.click();
 
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(".grid.grid-cols-2.gap-4")));
 
 		WebElement nameField = driver.findElement(By.name("name"));
-		nameField.sendKeys(name);
+		nameField.sendKeys(fullName);
 
 		WebElement userNameField = driver.findElement(By.name("username"));
 		userNameField.sendKeys(userName);
@@ -54,7 +53,7 @@ public class AppTest extends testData {
 
 	@Test(priority = 2, enabled = true)
 	public void logout() {
-		
+
 		WebElement menuButton = wait.until(
 				ExpectedConditions.elementToBeClickable((By.xpath("//button[@data-slot='dropdown-menu-trigger']"))));
 		menuButton.click();
@@ -66,8 +65,8 @@ public class AppTest extends testData {
 
 	@Test(priority = 3, enabled = true)
 	public void login() {
-		WebElement emailFeild = driver.findElement(By.name("identifier"));
-		emailFeild.sendKeys(email);
+		WebElement emailField = driver.findElement(By.name("identifier"));
+		emailField.sendKeys(email);
 
 		WebElement passwordField = driver.findElement(By.name("password"));
 		passwordField.sendKeys(password);
@@ -101,7 +100,7 @@ public class AppTest extends testData {
 		updateButton.click();
 
 		WebElement enterNewResumeName = driver.findElement(By.name("name"));
-		enterNewResumeName.clear();
+		enterNewResumeName.sendKeys(Keys.chord(Keys.CONTROL, "a", Keys.DELETE));
 		enterNewResumeName.sendKeys(newJobTitle);
 
 		WebElement saveChangesButton = driver.findElement(By.xpath("//button[text()='Save Changes']"));
@@ -110,7 +109,6 @@ public class AppTest extends testData {
 		driver.navigate().refresh();
 
 		Thread.sleep(2000);
-
 		List<WebElement> resumeCards = driver.findElements(By.cssSelector(".truncate.font-medium"));
 
 		String actualResumeName = resumeCards.get(2).getText();
@@ -127,18 +125,41 @@ public class AppTest extends testData {
 		WebElement imageUrlInput = driver.findElement(By.name("url"));
 		imageUrlInput.sendKeys("https://i.imgur.com/8Km9tLL.jpg");
 
-//		WebElement checkUploadedImage = driver.findElement(By.cssSelector(".page-picture.shrink-0.overflow-hidden"));
-//		Assert.assertTrue(checkUploadedImage.isDisplayed());
+		WebElement checkUploadedImage = wait.until(ExpectedConditions
+				.visibilityOfElementLocated(By.cssSelector(".page-picture.shrink-0.overflow-hidden")));
+		Assert.assertTrue(checkUploadedImage.isDisplayed());
+
+//		driver.navigate().back();
+
+	}
+
+	@Test(priority = 7)
+	public void resumeInformation() {
+
+		WebElement nameInput = driver.findElement(By.name("name"));
+		nameInput.sendKeys(name);
+
+		WebElement emailInput = driver.findElement(By.name("email"));
+		emailInput.sendKeys(email);
+
+	}
+
+	@Test(priority = 8, enabled = true)
+	public void downloadResume() throws InterruptedException {
+
+		List<WebElement> exportList = driver.findElements(By.cssSelector(".flex.flex-1.flex-col.gap-y-1"));
+		WebElement downloadPDF = exportList.get(2);
+		downloadPDF.click();
 
 		driver.navigate().back();
 
 	}
 
-	@Test(priority = 7, enabled = true)
+	@Test(priority = 9, enabled = true)
 	public void deleteResume() {
 
 		WebElement resumeCard = wait
-				.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(".select-none.cursor-default")));
+				.until(ExpectedConditions.elementToBeClickable(By.cssSelector(".select-none.cursor-default")));
 
 		actions.contextClick(resumeCard).perform();
 
@@ -150,24 +171,23 @@ public class AppTest extends testData {
 
 	}
 
-	@Test(priority = 8, enabled = true)
-	public void languageSwitching() {
+	@Test(priority = 10, enabled = true)
+	public void languageSwitching() throws InterruptedException {
 
 		WebElement menuButton = wait.until(
 				ExpectedConditions.elementToBeClickable((By.xpath("//button[@data-slot='dropdown-menu-trigger']"))));
 		menuButton.click();
 
-		WebElement LanguageButton = driver.findElement(By.xpath("//div[text()='Language']"));
-		LanguageButton.click();
+		WebElement languageButton = driver.findElement(By.xpath("//div[text()='Language']"));
+		languageButton.click();
 
-		WebElement selecteArabic = driver.findElement(By.xpath("//div[text()='Arabic']"));
-		selecteArabic.click();
+		WebElement selectedArabic = driver.findElement(By.xpath("//div[text()='Arabic']"));
+		selectedArabic.click();
 
-	}
+		driver.navigate().refresh();
 
-	@Test(priority = 9, enabled = false)
-	public void none() {
-
+		String actualLang = driver.findElement(By.tagName("html")).getAttribute("lang");
+		assertEquals(actualLang, "ar-SA", "Error: Website language was not updated to Arabic!");
 	}
 
 }

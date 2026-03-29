@@ -1,48 +1,119 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="1" total="9" passed="8" failed="0" skipped="0">
+<testng-results ignored="1" total="11" passed="9" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-03-16T16:28:41 PDT" name="Default suite" finished-at="2026-03-16T16:29:01 PDT" duration-ms="19945">
+  <suite started-at="2026-03-29T09:09:43 EET" name="Default suite" finished-at="2026-03-29T09:10:15 EET" duration-ms="31335">
     <groups>
     </groups>
-    <test started-at="2026-03-16T16:28:41 PDT" name="Default test" finished-at="2026-03-16T16:29:01 PDT" duration-ms="19945">
+    <test started-at="2026-03-29T09:09:43 EET" name="Default test" finished-at="2026-03-29T09:10:15 EET" duration-ms="31335">
       <class name="ReactiveResume.ReactiveResume.AppTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:ReactiveResume.ReactiveResume.AppTest@54b2fc58]" started-at="2026-03-16T16:28:41 PDT" name="setUp" finished-at="2026-03-16T16:28:42 PDT" duration-ms="1218" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:ReactiveResume.ReactiveResume.AppTest@51bddd98]" started-at="2026-03-29T09:09:43 EET" name="setUp" finished-at="2026-03-29T09:09:45 EET" duration-ms="1638" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="registerAccount()[pri:1, instance:ReactiveResume.ReactiveResume.AppTest@54b2fc58]" started-at="2026-03-16T16:28:42 PDT" name="registerAccount" finished-at="2026-03-16T16:28:46 PDT" duration-ms="4201" status="PASS">
+        <test-method signature="registerAccount()[pri:1, instance:ReactiveResume.ReactiveResume.AppTest@51bddd98]" started-at="2026-03-29T09:09:45 EET" name="registerAccount" finished-at="2026-03-29T09:09:50 EET" duration-ms="4581" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- registerAccount -->
-        <test-method signature="logout()[pri:2, instance:ReactiveResume.ReactiveResume.AppTest@54b2fc58]" started-at="2026-03-16T16:28:46 PDT" name="logout" finished-at="2026-03-16T16:28:48 PDT" duration-ms="1300" status="PASS">
+        <test-method signature="logout()[pri:2, instance:ReactiveResume.ReactiveResume.AppTest@51bddd98]" started-at="2026-03-29T09:09:50 EET" name="logout" finished-at="2026-03-29T09:09:51 EET" duration-ms="1384" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- logout -->
-        <test-method signature="login()[pri:3, instance:ReactiveResume.ReactiveResume.AppTest@54b2fc58]" started-at="2026-03-16T16:28:48 PDT" name="login" finished-at="2026-03-16T16:28:48 PDT" duration-ms="960" status="PASS">
+        <test-method signature="login()[pri:3, instance:ReactiveResume.ReactiveResume.AppTest@51bddd98]" started-at="2026-03-29T09:09:51 EET" name="login" finished-at="2026-03-29T09:09:52 EET" duration-ms="1396" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- login -->
-        <test-method signature="createResume()[pri:4, instance:ReactiveResume.ReactiveResume.AppTest@54b2fc58]" started-at="2026-03-16T16:28:48 PDT" name="createResume" finished-at="2026-03-16T16:28:50 PDT" duration-ms="2001" status="PASS">
+        <test-method signature="createResume()[pri:4, instance:ReactiveResume.ReactiveResume.AppTest@51bddd98]" started-at="2026-03-29T09:09:52 EET" name="createResume" finished-at="2026-03-29T09:09:55 EET" duration-ms="2508" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- createResume -->
-        <test-method signature="editTheResume()[pri:5, instance:ReactiveResume.ReactiveResume.AppTest@54b2fc58]" started-at="2026-03-16T16:28:50 PDT" name="editTheResume" finished-at="2026-03-16T16:28:55 PDT" duration-ms="4840" status="PASS">
+        <test-method signature="editTheResume()[pri:5, instance:ReactiveResume.ReactiveResume.AppTest@51bddd98]" started-at="2026-03-29T09:09:55 EET" name="editTheResume" finished-at="2026-03-29T09:09:59 EET" duration-ms="4437" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- editTheResume -->
-        <test-method signature="uploadImage()[pri:6, instance:ReactiveResume.ReactiveResume.AppTest@54b2fc58]" started-at="2026-03-16T16:28:55 PDT" name="uploadImage" finished-at="2026-03-16T16:28:58 PDT" duration-ms="2448" status="PASS">
+        <test-method signature="uploadImage()[pri:6, instance:ReactiveResume.ReactiveResume.AppTest@51bddd98]" started-at="2026-03-29T09:09:59 EET" name="uploadImage" finished-at="2026-03-29T09:10:02 EET" duration-ms="3086" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- uploadImage -->
-        <test-method signature="deleteResume()[pri:7, instance:ReactiveResume.ReactiveResume.AppTest@54b2fc58]" started-at="2026-03-16T16:28:58 PDT" name="deleteResume" finished-at="2026-03-16T16:28:59 PDT" duration-ms="1714" status="PASS">
+        <test-method signature="resumeInformation()[pri:7, instance:ReactiveResume.ReactiveResume.AppTest@51bddd98]" started-at="2026-03-29T09:10:03 EET" name="resumeInformation" finished-at="2026-03-29T09:10:03 EET" duration-ms="736" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- deleteResume -->
-        <test-method signature="languageSwitching()[pri:8, instance:ReactiveResume.ReactiveResume.AppTest@54b2fc58]" started-at="2026-03-16T16:28:59 PDT" name="languageSwitching" finished-at="2026-03-16T16:29:01 PDT" duration-ms="1093" status="PASS">
+        </test-method> <!-- resumeInformation -->
+        <test-method signature="downloadResume()[pri:8, instance:ReactiveResume.ReactiveResume.AppTest@51bddd98]" started-at="2026-03-29T09:10:03 EET" name="downloadResume" finished-at="2026-03-29T09:10:03 EET" duration-ms="256" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- downloadResume -->
+        <test-method signature="languageSwitching()[pri:9, instance:ReactiveResume.ReactiveResume.AppTest@51bddd98]" started-at="2026-03-29T09:10:04 EET" name="languageSwitching" finished-at="2026-03-29T09:10:14 EET" duration-ms="10338" status="FAIL">
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//div[text()='Language']"}
+  (Session info: chrome=146.0.7680.165)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
+Build info: version: '4.41.0', revision: '9fc754f'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.6'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [5f71c696f215e42429db73dfb9eed771, findElement {value=//div[text()='Language'], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 146.0.7680.165, chrome: {chromedriverVersion: 146.0.7680.165 (4b989da09e1..., userDataDir: C:\Users\AMERNA~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:65416}, goog:processID: 5420, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:65416/devtoo..., se:cdpVersion: 146.0.7680.165, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 5f71c696f215e42429db73dfb9eed771]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//div[text()='Language']"}
+  (Session info: chrome=146.0.7680.165)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
+Build info: version: '4.41.0', revision: '9fc754f'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.6'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [5f71c696f215e42429db73dfb9eed771, findElement {value=//div[text()='Language'], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 146.0.7680.165, chrome: {chromedriverVersion: 146.0.7680.165 (4b989da09e1..., userDataDir: C:\Users\AMERNA~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:65416}, goog:processID: 5420, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:65416/devtoo..., se:cdpVersion: 146.0.7680.165, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 5f71c696f215e42429db73dfb9eed771
+at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:169)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:142)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:223)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:604)
+at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:166)
+at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:427)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:421)
+at ReactiveResume.ReactiveResume.AppTest.languageSwitching(AppTest.java:168)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- languageSwitching -->
+        <test-method signature="deleteResume()[pri:10, instance:ReactiveResume.ReactiveResume.AppTest@51bddd98]" started-at="2026-03-29T09:10:14 EET" name="deleteResume" finished-at="2026-03-29T09:10:15 EET" duration-ms="804" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deleteResume -->
       </class> <!-- ReactiveResume.ReactiveResume.AppTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
