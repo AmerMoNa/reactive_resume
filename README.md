@@ -94,16 +94,27 @@ Language switching (English → Arabic)
 🔍 Test Case Details
 
 Test Case----------------------------------------Description
+
 Register Account---------------------------------Creates a new user with valid data
+
 Login--------------------------------------------Signs in using registered credentials
+
 Logout-------------------------------------------Logs out from the system
+
 Create Resume------------------------------------Creates a new resume
+
 Edit Resume--------------------------------------Updates resume name and verifies change
+
 Upload Image-------------------------------------Adds profile image via URL
+
 Resume Info--------------------------------------Inputs name and email
+
 Download Resume----------------------------------Exports resume as PDF
+
 Delete Resume------------------------------------Deletes existing resume
+
 Language Switching-------------------------------Changes UI language and verifies
+
 
 
 
