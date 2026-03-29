@@ -15,20 +15,32 @@ Ensure system reliability through repeatable test cases
 
 
 🛠️ Technologies Used
+
 Java
+
 Selenium WebDriver
+
 TestNG
+
 Maven (optional if you are using it)
+
 ChromeDriver / WebDriver
 
 
-ReactiveResume
+
+📂 Project Structure
+ReactiveResume/
 │
-├── resumeTest.java
-├── testData.java
+├── src/
+│   ├── test/java/
+│   │   └── ReactiveResume/
+│   │       ├── resumeTest.java
+│   │       └── testData.java
 │
 ├── testng.xml
+├── pom.xml (if Maven is used)
 └── README.md
+
 
 
 🧪 Test Scenarios Covered
