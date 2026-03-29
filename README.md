@@ -22,21 +22,13 @@ Maven (optional if you are using it)
 ChromeDriver / WebDriver
 
 
-
-📂 Project Structure
-ReactiveResume/
+ReactiveResume
 │
-├── src/
-│   ├── test/java/
-│   │   └── ReactiveResume/
-│   │       ├── resumeTest.java
-│   │       └── testData.java
+├── resumeTest.java
+├── testData.java
 │
 ├── testng.xml
-├── pom.xml (if Maven is used)
 └── README.md
-
-
 
 
 🧪 Test Scenarios Covered
